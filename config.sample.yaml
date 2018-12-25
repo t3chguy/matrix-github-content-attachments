@@ -1,0 +1,48 @@
+server:
+  address: "0.0.0.0"
+  port: 8080
+  public_url: "http://localhost:8080"
+
+matrix:
+  hs_url: "https://matrix.org"
+  user_id: "@localpart:matrix.org"
+  access_token: "MDAxOGxvY2F0aW9uTHISISLEGITIPINKYPROMISEjAwMTBjaWQgZ2VuID0gMQowMDI2Y2lkIHVzuihiuhoioMDptYXRyaXgub3JnCjAwMTZjaWQgdHlwZIxY2lkIG5vbmNlID0gLklLbnAwbHBxTztDeWFRegowMDE1Y2lkIGd1ZXN0ID0gdHJ1ZQowMDJmc2lnbmF0dXJlIMlNKZVkQhExRt-Rx0cN37F2rGx5QFpE46klW20UsEkMCg"
+
+regexes:
+  rooms:
+    - '^https://matrix\.to/(?:#/)?([!#].+?)(?:/.*)?$'
+    - '^https://view\.matrix\.org/room/(!.+?)(?:/.*)?$'
+
+github:
+  v3_api_url: "https://api.github.com/"
+  app:
+    integration_id: 22696
+    webhook_secret: "8b2fbf2dedb39b370f5646928ede14b098531d03"
+    private_key: |
+      -----BEGIN RSA PRIVATE KEY-----
+      MIIEpAIBAAKCAQEAvq5FI1zkWr/DX2iv4f/Rtuxs0mi/U97//BzQjkAaYeP+/lMA
+      v68zYtU56As4rujoVuKgX+iPg7MLA/e6u/F2RBNnkUMXq7Z4h8RCD+m/mxl+qtoA
+      Innbi/AwzMi6aCpLOONplFD0jADVq3SsmgmYQ2ts07lI7AI3TtEMue+qVZRFzzCd
+      5V6JqFxVfZfoGXO7S7xSoUBWtP7OscNKFiwXQ8O5JtZEpbc4aoXPo6VbnOJsb4c1
+      GhcbVKazRO8f56S0BoPFNuXguiViwk41dvIRq4hl1e1UBfghFvv6bEKsqz5v6Kow
+      zGpm8hfa8R03DvdY+w7cgqC3zvFhdju61p0FBwIDAQABAoIBAQC7i1ZvKK9lXpU/
+      4wyTAXV4MGP8M5BzYrNuebzbHMuWGpSz+lmTLzQgck5pH5hZ2LSkuHQ6wNdfFpuw
+      BFmC/0RuQpOr+Uxv1KIKDwtW8XZGi7XdP1vAjRBWPCETWh6V03t28Z3nhhRxG2UN
+      JU2al/NN5Hv+ZpAFqUxS1iRpQQPM9L1ieSliYn4YinMfo3KALNmUDC4vkZ7d0OrN
+      PIanjcZZMJnEHiXTk9W0GxDmh2dC0Hvy7nxKluvcgyjDPK/fzV9w3UoCxphD86lj
+      1sYh8qYjwKWrRIN/2Dfj/UqwlXGVr79Rc2yyrXtBOeLPY2J4omzGu/hFD/eHHc0j
+      c4tnT7uZAoGBAOC/lVtCP03oYEZnz8wP+4qM+b6pn1d1KzedF/6VnAdP3NFER+2g
+      ZBrGKlpLl5B393DqOnw2a/0au+jFe/xlslFHxCgDCttfFIAg28zK51eO5TyjfG0J
+      WNCDVUAkG5mGDO94xY88p6e4nzhAJ3Jcc9Y+lAv+ETvoDRWNgHDpmkhrAoGBANkx
+      +UxmpvVEbbWNBS3RqAhDjn+iVl3XVztIUUDNeC6VzxrMBqQwPwbYgxsi9Bg9CbYI
+      jHTMIN8rMtlfotkceDiM/5VzLM1e/XeYpju6PKoc7ZjumU4yeSZHfykkrK8TD+QH
+      r3vR4LloSndrpPXgZKFpX29TpHKBRnalRc3O/UzVAoGAAbKQvzq13bHGoGGCWUk5
+      nidIb586W9+/rtDZ8ItSvV9mDJKWdH4Eo4shoML3Zxjw3oJ2ZJ/ImwXLq4tqT1K5
+      URHYsnCrcVK7heg5oMdbjfa/VoDpnK04ZYLIbw6WwscXa+uemmFb5tFnKnaZlayL
+      F3ArkBegK7Kp/qKt+KxbBPcCgYB9f265Qqc+GSf7O1y+uOIKxF5WSYr19jOlQYgR
+      lafX4yAkL7e2r1n7rqcyyuOYDczKre3anwhvaxqal7QVF2ov4ujbhg1hLX3v2PhU
+      kqvy73wqXdOfZ3KxN6a2M0bEcpNAA2DWftMGzsgYcM6EdAAxdB18yiu/Lgt1CtJm
+      tS+PcQKBgQC6xIMxhBdw7phXJyuWbY/9XC4LWWyOvuBKpQNHP+osBz/MS4qpAwI2
+      bhi17lvmNchfdsoqZWK+QyiwrkabWt3sBOHZpEDOaqYPt5aOXpB+V8mQki5yrbUd
+      b8BUWariFXZd6UdJZUs2dTU3+LhSQUWnjI1073EkVZ1v9KZvnqtftg==
+      -----END RSA PRIVATE KEY-----
