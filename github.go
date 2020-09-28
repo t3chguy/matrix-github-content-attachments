@@ -30,10 +30,6 @@ type Request struct {
 	Installation *github.Installation `json:"installation"`
 }
 
-func (r *Request) GetInstallation() *github.Installation {
-	return r.Installation
-}
-
 type response struct {
 	Title string `json:"title"`
 	Body  string `json:"body"`
@@ -69,7 +65,7 @@ func (h *ContentReferenceHandler) Handle(ctx context.Context, eventType, deliver
 		return err
 	}
 
-	installationID := githubapp.GetInstallationIDFromEvent(&req)
+	installationID := req.Installation.GetID()
 
 	client, err := h.NewInstallationClient(installationID)
 	if err != nil {
@@ -83,11 +79,11 @@ func (h *ContentReferenceHandler) Handle(ctx context.Context, eventType, deliver
 	}
 
 	r, err := client.NewRequest("POST", u, pl)
-	r.Header.Set("Accept", "application/vnd.github.corsair-preview+json")
-
 	if err != nil {
 		return err
 	}
+
+	r.Header.Set("Accept", "application/vnd.github.corsair-preview+json")
 	_, err = client.Do(ctx, r, nil)
 	return err
 }

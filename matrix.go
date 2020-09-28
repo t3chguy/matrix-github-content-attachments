@@ -33,13 +33,13 @@ type RespRoomDirectoryAlias struct {
 
 func (c *Client) GetRoomDirectoryAlias(roomAlias string) (resp *RespRoomDirectoryAlias, err error) {
 	urlPath := c.BuildURL("directory", "room", roomAlias)
-	_, err = c.MakeRequest("GET", urlPath, nil, &resp)
+	err = c.MakeRequest("GET", urlPath, nil, &resp)
 	return
 }
 
 func (c Client) getRoomState(roomID, stateKey string, resp interface{}) (err error) {
 	urlPath := c.BuildURL("rooms", roomID, "state", stateKey)
-	_, err = c.MakeRequest("GET", urlPath, nil, &resp)
+	err = c.MakeRequest("GET", urlPath, nil, &resp)
 	return
 }
 func (c Client) getRoomName(roomID string, ch chan<- string) {
