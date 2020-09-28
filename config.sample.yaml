@@ -10,8 +10,8 @@ matrix:
 
 regexes:
   rooms:
-    - '^https://matrix\.to/(?:#/)?([!#].+?)(?:/.*)?$'
-    - '^https://view\.matrix\.org/room/(!.+?)(?:/.*)?$'
+    - '^https://matrix\.to/(?:#/)?([!#].+?)(?:/.*)?(?:\?.*)?$'
+    - '^https://view\.matrix\.org/room/(!.+?)(?:/.*)?(?:\?.*)?$'
 
 github:
   v3_api_url: "https://api.github.com/"
