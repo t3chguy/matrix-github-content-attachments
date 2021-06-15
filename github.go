@@ -27,6 +27,9 @@ type Request struct {
 		NodeID    string `json:"node_id"`
 		Reference string `json:"reference"`
 	} `json:"content_reference"`
+	Repository struct {
+		FullName string `json:"full_name"`
+	} `json:"repository"`
 	Installation *github.Installation `json:"installation"`
 }
 
@@ -72,7 +75,7 @@ func (h *ContentReferenceHandler) Handle(ctx context.Context, eventType, deliver
 		return err
 	}
 
-	u := fmt.Sprintf("content_references/%v/attachments", req.ContentReference.ID)
+	u := fmt.Sprintf("repos/%s/content_references/%v/attachments", req.Repository.FullName, req.ContentReference.ID)
 	pl := h.GetResponse(ctx, req.ContentReference.Reference)
 	if pl == nil {
 		return errors.New("unable to handle URL")
